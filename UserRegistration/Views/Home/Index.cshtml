@@ -1,0 +1,31 @@
+﻿@model RegisterModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+@*Представление формы регистрации*@
+<h2>Регистрация</h2>
+<br>
+<div class="list-group-item d-flex justify-content-between">
+@using (Html.BeginForm("Register", "Home", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.UserName)
+    <br>
+    @Html.TextBoxFor(m => m.UserName)
+    <br>
+    @Html.LabelFor(m => m.Email)
+    <br>
+    @Html.TextBoxFor(m => m.Email)
+    <br>
+    @Html.LabelFor(m => m.Password)
+    <br>
+    @Html.PasswordFor(m => m.Password)
+    <br>
+    @Html.LabelFor(m => m.ConfirmPassword)
+    <br>
+    @Html.PasswordFor(m => m.ConfirmPassword)
+    <br></br>
+    <button type="submit">Зарегистрироваться</button>
+}
+</div>
+
+
